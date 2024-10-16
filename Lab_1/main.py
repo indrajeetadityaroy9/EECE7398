@@ -344,15 +344,6 @@ def dynamic_test_classification(model_class, num_classes_mnist, num_classes_cifa
 
 
 def main():
-    description = """
-          ______ .__   __. .__   __.      ______  __          ___           _______.     _______. __   _______  __   _______ .______         
-         /      ||  \ |  | |  \ |  |     /      ||  |        /   \         /       |    /       ||  | |   ____||  | |   ____||   _  \        
-        |  ,----'|   \|  | |   \|  |    |  ,----'|  |       /  ^  \       |   (----`   |   (----`|  | |  |__   |  | |  |__   |  |_)  |       
-        |  |     |  . `  | |  . `  |    |  |     |  |      /  /_\  \       \   \        \   \    |  | |   __|  |  | |   __|  |      /        
-        |  `----.|  |\   | |  |\   |    |  `----.|  `----./  _____  \  .----)   |   .----)   |   |  | |  |     |  | |  |____ |  |\  \----.   
-         \______||__| \__| |__| \__|     \______||_______/__/     \__\ |_______/    |_______/    |__| |__|     |__| |_______|| _| `._____|   
-    """
-
     epilog = """Usage examples:
       python3 CNNclassify.py train --mnist       Train the model using the MNIST dataset
       python3 CNNclassify.py train --cifar       Train the model using the CIFAR-10 dataset
@@ -376,7 +367,6 @@ def main():
     args = parser.parse_args()
 
     if len(sys.argv) == 1 or args.command is None:
-        print(description)
         parser.print_help()
         sys.exit(1)
 
